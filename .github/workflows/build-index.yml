@@ -1,0 +1,43 @@
+name: Build OHL-Imagica Index
+
+on:
+  schedule:
+    - cron: '0 6 * * 1-5'   # 6 AM UTC, Monday–Friday
+  workflow_dispatch:           # also adds a manual "Run workflow" button in GitHub UI
+
+permissions:
+  contents: write              # needed to commit the updated HTML back to the repo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build asset index
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python build_dam.py \
+            --folder-id "${{ secrets.DRIVE_FOLDER_ID }}" \
+            --output docs/index.html
+
+      - name: Commit updated files
+        run: |
+          git config user.name  "OHL-Imagica Bot"
+          git config user.email "imagica-bot@users.noreply.github.com"
+          git add docs/index.html captions_cache.json
+          git diff --staged --quiet || git commit -m "chore: update asset index $(date -u '+%Y-%m-%d %H:%M UTC') [skip ci]"
+          git push
