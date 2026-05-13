@@ -805,6 +805,7 @@ function buildResponse(query) {
 
   // Suggest related filters
   const tags = [...new Set(assets.flatMap(a => a.tags || []))].slice(0, 6);
+  const freepikUrl = `https://www.freepik.com/search?query=${encodeURIComponent(query)}`;
 
   return {
     text,
@@ -812,6 +813,8 @@ function buildResponse(query) {
     totalAssets: total,
     shown: shown.length,
     tags,
+    freepikUrl,
+    query,
     suggestions: total > limit ? [`Show more results`, ...tags.slice(0,2).map(t => `Filter by tag: ${t}`)] : []
   };
 }
@@ -974,6 +977,22 @@ function renderBubble(bubble, resp) {
     });
     bubble.appendChild(s);
   }
+
+  // Freepik external search link
+  if (resp.freepikUrl) {
+    const fp = document.createElement('div');
+    fp.style.cssText = 'margin-top:10px';
+    fp.innerHTML = `<a href="${escHtml(resp.freepikUrl)}" target="_blank" rel="noopener noreferrer"
+      style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--text2);text-decoration:none;transition:color .15s"
+      onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text2)'">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+        <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+      </svg>
+      Also search "<b>${escHtml(resp.query)}</b>" on Freepik
+    </a>`;
+    bubble.appendChild(fp);
+  }
 }
 
 function showMoreResults(bubble, resp) {
@@ -1100,10 +1119,8 @@ function toggleTheme() {
 
   const bubble = addMessage('bot', b => {});
   bubble.innerHTML = `
-    Hi! I'm <b>Imagica</b> ✦, your smart asset assistant 👋<br><br>
-    I have <b>${total} assets</b> indexed across <b>${inds.length} folders</b>:
-    ${inds.map(i => `<b>${i}</b>`).join(', ')}.<br><br>
-    You can ask me things like:<br>`;
+    Hi! I'm <b>Imagica</b> ✦, your smart asset assistant 👋<br>
+    I have <b>${total} assets</b> indexed across <b>${inds.length} folders</b>:`;
 
   const sugg = document.createElement('div');
   sugg.className = 'suggestions';
