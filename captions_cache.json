@@ -1222,7 +1222,7 @@
   "Inspiration/5 points - 4.jpg": {
     "size": 1776261,
     "modified": "2025-09-18",
-    "caption": "# Image Description\n\nThis image displays a \"Core Values\" infographic featuring six circular icons arranged in a hexagonal pattern against a light gray background. The icons use teal, green, and yellow colors to represent different value concepts, each with a distinct symbol inside (including what appears to be icons for growth, integrity, positivity, trust, and teamwork). The clean, minimalist design conveys a professional and organized approach to displaying corporate or organizational principles."
+    "caption": "# Image Description\n\nThis infographic displays five core values represented by colored circular icons arranged in a hexagonal pattern against a light gray background. The values are labeled with icons in teal, green, and yellow colors, with \"CORE VALUES\" appearing as a header in dark text at the top. The minimalist design creates a professional, organized appearance suitable for corporate or organizational documentation."
   },
   "Inspiration/5 points - 3.jpg": {
     "size": 1533980,
@@ -4593,5 +4593,80 @@
     "size": 29918,
     "modified": "2024-10-07",
     "caption": "# Image Description\n\nThis illustration features a stack of golden hexagonal blocks arranged in a pyramid formation against a yellow background, each containing different icons representing security, protection, and data management concepts. The warm yellow and gold color palette creates a professional, optimistic mood suitable for technology or security-related content, though no visible text or logos are present in the image."
+  },
+  "Maruti petals/Petals-10.png": {
+    "size": 85916,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nThe image shows a circular arrangement of 12 circles against a light gray background, with 10 blue circles, 1 gray circle, and 1 darker blue circle positioned around the perimeter. The layout suggests a loading indicator, progress wheel, or cyclical process diagram commonly used in user interfaces."
+  },
+  "Maruti petals/Petals-9.png": {
+    "size": 85952,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nThis image shows a circular arrangement of 12 blue dots or circles against a light gray background, forming a complete ring with a white center space. The design resembles a loading spinner or progress indicator, with the blue circles evenly spaced around the perimeter."
+  },
+  "Maruti petals/Petals-8.png": {
+    "size": 85986,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nA circle of 12 dots arranged in a clock-like pattern against a white background, with most dots in dark blue and two lighter gray dots positioned at the 2 and 3 o'clock positions. The minimalist design suggests a loading indicator or progress visualization interface."
+  },
+  "Maruti petals/Petals-7.png": {
+    "size": 86405,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nThis image shows a circular arrangement of 12 dots in varying shades of blue and gray against a light gray background. The dots are positioned in a clock-like pattern, with the lighter gray dots appearing at the top, creating a gradient effect from darker to lighter blue tones around the circle."
+  },
+  "Maruti petals/Petals-6.png": {
+    "size": 85967,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nThis image shows 12 circles arranged in a ring formation against a white background, with most circles in shades of blue and one gray circle. The circles appear to be part of a loading or progress indicator design, creating a neutral, minimalist mood typical of user interface elements."
+  },
+  "Maruti petals/Petals-5.png": {
+    "size": 85977,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nThis image shows a circular arrangement of 12 colored circles against a white background, with most circles in shades of blue and one gray circle positioned at the top left. The minimalist design creates a simple, clean aesthetic with no visible text or logos."
+  },
+  "Maruti petals/Petals-4.png": {
+    "size": 86372,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nA circular arrangement of 12 circles is displayed against a white background, with 10 solid blue circles, 1 solid gray circle, and 1 lighter gray circle positioned around the perimeter. The minimalist design has a clean, neutral tone and suggests a loading spinner or progress indicator interface element."
+  },
+  "Maruti petals/Petals-3.png": {
+    "size": 86041,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nThis image shows a circular arrangement of 12 blue and gray circles on a light gray background, creating a loading or progress indicator design. The predominantly blue circles with a few gray accents suggest a simple, minimalist interface element commonly used in digital applications."
+  },
+  "Maruti petals/Petals-2.png": {
+    "size": 85959,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nThis image shows a circular arrangement of 12 dark blue circles against a white background, forming a complete ring with a hollow center. The minimalist design has a clean, geometric appearance with no visible text or logos, and evokes a neutral, professional mood often associated with loading indicators or process cycles."
+  },
+  "Maruti petals/Petals-1.png": {
+    "size": 85915,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nThe image shows a circular arrangement of 12 dots against a white background, with 11 solid blue dots and 1 gray dot positioned at approximately the 7 o'clock position. This appears to be a loading or progress indicator interface element, commonly used in digital applications to show waiting or processing status."
+  },
+  "Maruti petals/Complete.png": {
+    "size": 85032,
+    "modified": "2026-01-04",
+    "caption": "# Image Description\n\nThe image shows twelve dark blue circles arranged in a circular pattern against a light gray background, with a white space in the center. The composition creates a minimalist, geometric design with a balanced and symmetrical layout."
+  },
+  "3D icons/purple_3d_bar_transparent.png": {
+    "size": 85865,
+    "modified": "2026-05-20",
+    "caption": "# Image Description\n\nA tall, cylindrical purple object with rounded edges is shown against a white background. The item appears to be a portable speaker or similar electronic device, featuring a gradient purple color that transitions slightly in tone along its length."
+  },
+  "3D icons/yellow_3d_coin_transparent.png": {
+    "size": 137541,
+    "modified": "2026-05-20",
+    "caption": "# Image Description\n\nA bright yellow sphere is centered against a plain white background, with subtle shading and a highlight that gives it a three-dimensional, glossy appearance. The image has a clean, minimalist aesthetic with no visible text or logos."
+  },
+  "3D icons/purple_3d_transparent.png": {
+    "size": 91180,
+    "modified": "2026-05-20",
+    "caption": "# Image Description\n\nThis image shows a tall, rectangular purple gradient object or container that transitions from a brighter purple at the top to a darker, deep blue-purple at the bottom. The object is photographed against a plain white background, creating a clean, minimalist composition with no visible text or logos."
+  },
+  "3D icons/Yellow Bottom Ribbon.png": {
+    "size": 1861291,
+    "modified": "2026-05-20",
+    "caption": "# Image Description\n\nThe image shows a simple, minimalist horizontal rectangular outline or text box with a yellow/gold border against a light gray background. There is no visible text, logos, or other content within the box, creating a clean, empty design that appears to be a template or UI element."
   }
 }
