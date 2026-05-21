@@ -202,6 +202,18 @@ def make_thumbnail_b64_from_bytes(raw_bytes: bytes) -> str | None:
         print(f"  [WARN] thumb from bytes failed: {e}")
         return None
 
+def make_svg_b64(path_or_bytes) -> str | None:
+    """Return base64-encoded raw SVG content for direct browser embedding."""
+    try:
+        if isinstance(path_or_bytes, (str, Path)):
+            raw = Path(path_or_bytes).read_bytes()
+        else:
+            raw = bytes(path_or_bytes)
+        return base64.b64encode(raw).decode()
+    except Exception as e:
+        print(f"  [WARN] SVG read failed: {e}")
+        return None
+
 def download_drive_file(file_id: str, drive_svc) -> bytes | None:
     """Download a file from Drive and return raw bytes."""
     try:
@@ -260,23 +272,29 @@ def scan_drive_folder(root_folder_id: str, drive_svc) -> list:
                 counter[0] += 1
                 print(f"  [{counter[0]:>4}] {rel_str}", end='\r', flush=True)
 
-                # Thumbnail: download file and resize locally
+                # Thumbnail + AI caption
                 thumb = None
-                if kind == 'image' and ext != 'svg':
+                thumb_type = 'jpeg'
+                ai_desc = ''
+
+                if kind == 'image' or kind == 'design':
                     raw = download_drive_file(file_id, drive_svc)
                     if raw:
-                        thumb = make_thumbnail_b64_from_bytes(raw)
-
-                # AI caption (uses same cache as local mode)
-                ai_desc = ''
-                if kind == 'image' and ext != 'svg':
-                    cached = get_cached_caption(rel_str, size, modified)
-                    if cached is not None:
-                        ai_desc = cached
-                    else:
-                        ai_desc = caption_image(None, thumb, rel_str, size, modified)
-                        if ai_desc:
-                            print(f"\n  [AI ✦] {name[:45]}: {ai_desc[:75]}…")
+                        if ext == 'svg':
+                            # Embed raw SVG — browsers render natively
+                            thumb = make_svg_b64(raw)
+                            thumb_type = 'svg+xml'
+                        else:
+                            thumb = make_thumbnail_b64_from_bytes(raw)
+                            # AI caption only for raster images
+                            if kind == 'image' and thumb:
+                                cached = get_cached_caption(rel_str, size, modified)
+                                if cached is not None:
+                                    ai_desc = cached
+                                else:
+                                    ai_desc = caption_image(None, thumb, rel_str, size, modified)
+                                    if ai_desc:
+                                        print(f"\n  [AI ✦] {name[:45]}: {ai_desc[:75]}…")
 
                 # Per-file Drive URLs (direct, not search)
                 drive_url = f"https://drive.google.com/file/d/{file_id}/view"
@@ -296,6 +314,7 @@ def scan_drive_folder(root_folder_id: str, drive_svc) -> list:
                     "modified":      modified,
                     "tags":          tags,
                     "thumb":         thumb,
+                    "thumbType":     thumb_type,
                     "driveUrl":      drive_url,
                     "aiDescription": ai_desc,
                 })
@@ -405,7 +424,16 @@ def scan_folder(root: Path):
 
             # Thumbnail
             thumb = None
-            if is_img and not ext == '.svg':
+            thumb_type = 'jpeg'
+            if is_img:
+                if ext == '.svg':
+                    # Embed raw SVG — browsers render natively
+                    thumb = make_svg_b64(fpath)
+                    thumb_type = 'svg+xml'
+                else:
+                    thumb = make_thumbnail_b64(fpath)
+            elif is_design:
+                # Try PIL for PSD/AI/EPS (works for EPS-based AI with Ghostscript installed)
                 thumb = make_thumbnail_b64(fpath)
 
             # AI caption (vision model describes image content)
@@ -447,6 +475,7 @@ def scan_folder(root: Path):
                 "modified":      modified_str,
                 "tags":          auto_tags(rel_str),
                 "thumb":         thumb,      # base64 string or null
+                "thumbType":     thumb_type, # 'jpeg' or 'svg+xml'
                 "driveUrl":      drive_url,  # view-only Google Drive link
                 "aiDescription": ai_desc,    # Claude vision caption
             }
@@ -1019,7 +1048,8 @@ function makeImgCard(a) {
 
   let thumbHtml;
   if (a.thumb) {
-    thumbHtml = `<img class="img-thumb" src="data:image/jpeg;base64,${a.thumb}" alt="${escHtml(a.name)}" loading="lazy">`;
+    const mime = a.thumbType || 'jpeg';
+    thumbHtml = `<img class="img-thumb" src="data:image/${mime};base64,${a.thumb}" alt="${escHtml(a.name)}" loading="lazy">`;
   } else {
     const icon = kindIcon(a.kind);
     thumbHtml = `<div class="img-thumb placeholder">${icon}</div>`;
@@ -1045,7 +1075,8 @@ function makeImgCard(a) {
 }
 
 function openLightbox(a) {
-  document.getElementById('lb-img').src = a.thumb ? `data:image/jpeg;base64,${a.thumb}` : '';
+  const lbMime = a.thumbType || 'jpeg';
+  document.getElementById('lb-img').src = a.thumb ? `data:image/${lbMime};base64,${a.thumb}` : '';
   document.getElementById('lb-img').style.display = a.thumb ? 'block' : 'none';
   const caption = a.aiDescription
     ? `${a.aiDescription}`
