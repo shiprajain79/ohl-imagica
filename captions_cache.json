@@ -1222,7 +1222,7 @@
   "Inspiration/5 points - 4.jpg": {
     "size": 1776261,
     "modified": "2025-09-18",
-    "caption": "# Image Description\n\nThis image displays a \"Core Values\" infographic featuring six circular icons arranged in a hexagonal pattern against a light gray background. The icons, rendered in teal, green, and yellow, represent different values or principles, with each circle containing a simple symbol. The minimalist design and muted color palette create a professional, corporate aesthetic typically used in business presentations or organizational materials."
+    "caption": "# Image Description\n\nThis image displays a \"Core Values\" diagram featuring six circular icons arranged in a hexagonal pattern against a white background. The icons use a teal, green, and yellow color palette and appear to represent different organizational principles or values, though the specific labels are not clearly legible in this view. The design has a clean, modern, and professional appearance typical of corporate presentation materials."
   },
   "Inspiration/5 points - 3.jpg": {
     "size": 1533980,
@@ -7133,5 +7133,50 @@
     "size": 750984,
     "modified": "2026-07-22",
     "caption": "# Image Description\n\nThe image shows the logo for \"sprintlearning.ai,\" featuring a stylized blue arrow or lightning bolt design pointing to the right, alongside the company name in dark gray text. The color scheme is predominantly blue and gray on a white background, conveying a modern, tech-focused aesthetic."
+  },
+  "Course Images/AI courses/AI for document processing.jpg": {
+    "size": 1343611,
+    "modified": "2026-07-23",
+    "caption": "# Image Description\n\nThis illustration depicts a digital workspace scene with two stylized figures collaborating around a central computer interface or dashboard, surrounded by various UI elements, charts, and documents in a flat design style. The dominant colors are blue, orange, purple, and white, creating a modern, professional atmosphere that conveys productivity and teamwork in a tech or software development environment."
+  },
+  "Course Images/AI courses/AI in Logistics.jpg": {
+    "size": 428759,
+    "modified": "2026-07-23",
+    "caption": "# Image Description\n\nA row of white modern chairs with black accents are lined up on a gray stone plaza in front of a historic beige/tan-colored building with classical architecture. The scene has a minimalist, orderly aesthetic with warm afternoon lighting casting shadows on the pavement."
+  },
+  "Course Images/AI courses/AI for SCM.jpg": {
+    "size": 1686993,
+    "modified": "2026-07-23",
+    "caption": "# Image Description\n\nThis isometric illustration depicts a warehouse or logistics operation with a worker in a yellow hard hat overseeing package handling activities. The scene features cardboard boxes stacked on a pallet, a delivery drone hovering above, workers moving packages, and a blue hand truck, all set against a light blue background using a minimalist, 3D cartoon style."
+  },
+  "Course Images/AI courses/Prompting with AI.jpg": {
+    "size": 930199,
+    "modified": "2026-07-23",
+    "caption": "# Image Description\n\nThe image shows an illustration of a person sitting and using a laptop, positioned against a light blue background with various UI elements, icons, and data visualizations displayed around them. The dominant colors are light blue, white, and neutral tones, creating a clean, professional mood that conveys productivity and digital work or analytics."
+  },
+  "Course Images/AI courses/Ethical AI.jpg": {
+    "size": 747342,
+    "modified": "2025-12-19",
+    "caption": "# Image Description\n\nThis illustration depicts a web interface or application screen with a balance scale as the central focus, flanked by two cartoon figures—one on the left in blue tones and one on the right in red and green tones—suggesting concepts of equality, comparison, or decision-making. The dominant colors are blue, white, red, and green, creating a clean, modern aesthetic with a professional yet friendly mood."
+  },
+  "Course Images/AI courses/AI for Customer Service.jpg": {
+    "size": 771605,
+    "modified": "2025-12-19",
+    "caption": "# Image Description\n\nA digital illustration shows a man in business attire standing next to a desktop computer displaying a large blue 3D sphere or globe with a handle. The background features a light blue gradient with circuit board patterns and data visualization elements, creating a tech-focused setting. A speech bubble appears in the upper right corner, suggesting communication or information sharing."
+  },
+  "Course Images/AI courses/AI - Image2.jpg": {
+    "size": 892233,
+    "modified": "2025-12-19",
+    "caption": "# Image Description\n\nThe illustration depicts a professional businessman in a dark suit against a blue background, surrounded by business and finance-related icons including money, charts, documents, and a light bulb. The dominant colors are blue, green, and yellow, creating a modern, corporate aesthetic that conveys productivity, financial growth, and professional success."
+  },
+  "Course Images/AI courses/AI - Image1.jpg": {
+    "size": 1302511,
+    "modified": "2025-12-19",
+    "caption": "# Image Description\n\nThis illustration depicts a team of workers and construction/maintenance personnel in a light blue background setting, featuring various tools and equipment icons scattered throughout. The dominant colors are blue, yellow, orange, and neutral tones, creating a professional yet approachable mood that conveys productivity and teamwork in the trades or service industry. No visible text or logos are apparent in the image."
+  },
+  "Course Images/AI courses/businessman-holding-ai-icon-hologram-with-futuristic-technology-interface-hand.jpg": {
+    "size": 11248413,
+    "modified": "2025-12-19",
+    "caption": "# Image Description\n\nA person in dark business attire holds a glowing crystal ball or sphere containing a bright yellow lightbulb surrounded by digital icons representing technology and innovation. The dark background emphasizes the warm golden glow of the light, creating a professional atmosphere that suggests concepts of ideas, technology, and future thinking."
   }
 }
