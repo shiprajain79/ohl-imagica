@@ -1222,7 +1222,7 @@
   "Inspiration/5 points - 4.jpg": {
     "size": 1776261,
     "modified": "2025-09-18",
-    "caption": "# Image Description\n\nThis image displays a \"Core Values\" diagram featuring six circular icons arranged in a hexagonal pattern against a white background. The icons use teal, green, and yellow colors and represent different organizational values, with a minimalist, professional design typical of corporate presentations or business documents."
+    "caption": "# Core Values Diagram\n\nThis image displays a circular arrangement of five colored icons representing core values, each with a distinct symbol and color (teal, green, yellow, and light green). The icons are connected by minus and equals signs, positioned against a light gray background with \"CORE VALUES\" as the header text at the top."
   },
   "Inspiration/5 points - 3.jpg": {
     "size": 1533980,
@@ -7338,5 +7338,15 @@
     "size": 85032,
     "modified": "2026-01-04",
     "caption": "# Image Description\n\nThe image shows 12 dark blue circles arranged in a circular pattern against a white background, with a blank white space in the center. There is no visible text or logos, and the simple geometric design creates a clean, minimalist appearance."
+  },
+  "Course Images/AI courses/AI in HR.jpg": {
+    "size": 1749289,
+    "modified": "2026-08-07",
+    "caption": "# Image Description\n\nTwo people sit at a desk facing each other in a collaborative work setting, with one person on a laptop and the other gesturing while speaking. The illustration uses soft pastels of blue, purple, orange, and gray against a light blue-green background, conveying a friendly, professional mood of teamwork and communication."
+  },
+  "Course Images/AI courses/AI in Google Docs.jpg": {
+    "size": 1464447,
+    "modified": "2026-08-07",
+    "caption": "# Image Description\n\nThe illustration shows two cartoon figures collaborating on web design, with one person pointing at a laptop displaying a colorful website interface and the other holding a mobile device mockup. The scene uses a bright blue background with dominant colors of blue, red, orange, and white, conveying a professional yet friendly mood about digital design and development work."
   }
 }
